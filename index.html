@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blazon Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        
+        /* Custom utility for the asterisk box */
+        .asterisk-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            width: 0.7em;
+            height: 0.9em;
+            margin: 0 0.05em;
+            vertical-align: middle;
+            position: relative;
+            top: -0.05em;
+        }
+        
+        .asterisk-symbol {
+            font-size: 0.8em;
+            line-height: 1;
+            position: relative;
+            top: 0.05em;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-6 md:p-10 lg:p-12 overflow-hidden relative text-gray-900">
+
+    <!-- Background/Right Image Area -->
+    <!-- Using a placeholder image to represent the abstract blue graphic on the right -->
+    <div class="absolute top-0 right-0 w-1/2 h-full z-0 pointer-events-none hidden md:block">
+        <div class="w-full h-full relative">
+            <!-- The design shows a stepped blue gradient grid. We use a placeholder here as requested. -->
+            <!-- We position it to match the visual whitespace at the top -->
+            <img src="https://placehold.co/800x1000/001f5c/001f5c.png?text=+" 
+                 alt="Abstract Blue Grid" 
+                 class="absolute top-[8px] right-0 w-full h-[90%] object-cover opacity-90" 
+                 style="mask-image: linear-gradient(to bottom, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);">
+            
+            <!-- Overlaying lighter blue strips to mimic the stepped gradient effect of the original design using multiple images/divs would be ideal, 
+                 but per instructions we use an img tag. The solid blue placeholder represents the core visual mass. -->
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="flex w-full z-10 relative">
+        <!-- Logo Column -->
+        <div class="w-auto">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter leading-none flex items-baseline">
+                Blazon
+            </h1>
+        </div>
+
+        <!-- Navigation Column -->
+        <!-- Positioned with margin to match the layout -->
+        <nav class="ml-24 md:ml-32 lg:ml-48 pt-2">
+            <ul class="text-sm font-medium leading-tight space-y-1">
+                <li class="flex items-center -ml-3.5">
+                    <span class="w-3.5 text-center">•</span>
+                    <span>About</span>
+                </li>
+                <li>Team</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-grow flex flex-col justify-center w-full max-w-[90rem] z-10 relative mt-12 md:mt-0">
+        <div class="w-full md:w-[45%] lg:w-[38%] flex flex-col gap-8">
+            <p class="text-xl md:text-2xl font-medium leading-snug tracking-tight">
+                Blazon turns product launches into market dominance through integrated campaigns. Led by Michael Raven, our team has powered over 500 launches and raised $120M for founders through crowdfunding and growth.
+            </p>
+            <p class="text-xl md:text-2xl font-medium leading-snug tracking-tight">
+                We reach startup founders where they are, helping them overcome launch inexperience and capture market traction with expertise that most agencies simply lack.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full flex flex-col md:flex-row justify-between items-end z-10 relative text-xs md:text-sm font-medium tracking-tight mt-12">
+        <!-- Left Footer Text -->
+        <div class="w-full md:w-1/3 mb-4 md:mb-0">
+            From crowdfunding to advertising and growth channels.
+        </div>
+
+        <!-- Center Copyright -->
+        <div class="w-full md:w-1/3 text-left md:text-center mb-4 md:mb-0 text-gray-900">
+            &copy; 2025 Blazon Launch Agency
+        </div>
+
+        <!-- Right Logo -->
+        <div class="w-full md:w-1/3 flex justify-start md:justify-end">
+            <div class="flex flex-col items-end leading-none">
+                <span class="font-bold text-lg tracking-tight">blazon</span>
+                <span class="text-[10px] text-[#475569] tracking-wide">Market Dominance</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
