@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blazon Agency - Crowdfunding Launch Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F7; /* Matches the light gray background */
+            overflow-x: hidden;
+        }
+
+        /* Typography Utilities */
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+        
+        /* Custom Font Weights/Sizes for pixel perfection */
+        .font-feature-settings { font-feature-settings: "ss01", "ss02"; }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Base animation classes */
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        /* Staggered delays */
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-700 { animation-delay: 700ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up,
+            .animate-fade-in,
+            .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body class="text-[#111111]">
+
+    <!-- Navigation -->
+    <nav class="w-full px-6 py-6 md:py-8 animate-fade-in delay-0">
+        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center gap-3">
+                    <!-- Logo Icon (Vertical Bar) -->
+                    <div class="w-[5px] h-5 bg-black rounded-sm"></div>
+                    <span class="text-xl font-bold tracking-tight">BLAZON</span>
+                </div>
+                
+                <!-- Tagline (Hidden on very small screens if needed, but kept for fidelity) -->
+                <span class="text-sm text-gray-500 font-normal ml-2 hidden sm:inline-block">Crowdfunding Launch Strategy</span>
+                
+                <!-- Mobile Menu Icon Placeholder (Visual only) -->
+                <button class="md:hidden text-gray-900">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+
+            <!-- Center Links -->
+            <div class="hidden md:flex items-center gap-8 text-[15px] font-normal text-[#475569]">
+                <a href="#" class="hover:text-black transition-colors flex items-center gap-1">
+                    Launch Strategies
+                    <span class="text-xs relative -top-0.5">+</span>
+                </a>
+                <a href="#" class="hover:text-black transition-colors">Case Studies</a>
+            </div>
+
+            <!-- Right Auth -->
+            <div class="hidden md:flex items-center gap-6 text-[15px]">
+                <a href="#" class="text-gray-600 hover:text-black transition-colors">Log in</a>
+                <a href="#" class="bg-[#0A0A0A] text-white px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm">Sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Hero Content -->
+    <main class="max-w-[1400px] mx-auto px-6 pt-20 md:pt-32 lg:pt-40 pb-12">
+        
+        <!-- Headline & Description Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-12 mb-24 md:mb-32">
+            
+            <!-- Main Headline -->
+            <div class="lg:col-span-8">
+                <h1 class="text-balance text-5xl md:text-6xl lg:text-[5.25rem] leading-[1.05] lg:leading-[0.95] tracking-tight font-normal text-[#111111] animate-fade-in-up delay-100">
+                    Multi-platform launch strategies for hardware startups
+                </h1>
+            </div>
+
+            <!-- Description Text -->
+            <div class="lg:col-span-4 flex items-center lg:items-end lg:pb-4">
+                <p class="text-pretty text-lg md:text-[1.15rem] leading-relaxed text-gray-500 max-w-md animate-fade-in-up delay-200">
+                    Transform your crowdfunding campaign into a $120M+ success with coordinated multi-platform launch strategies.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Actions & Info Row -->
+        <div class="flex flex-col md:flex-row justify-between items-end w-full gap-8 md:gap-0 animate-fade-in-up delay-300">
+            
+            <!-- CTA Area -->
+            <div class="flex items-center gap-4 w-full md:w-auto">
+                <button class="bg-[#0A0A0A] text-white px-6 py-3.5 rounded-lg hover:bg-gray-800 transition-transform active:scale-95 font-medium text-[15px]">
+                    Get started
+                </button>
+                <div class="text-xs text-gray-500 leading-tight">
+                    Over $120M raised<br>across 70+ campaigns
+                </div>
+            </div>
+
+            <!-- Block Info -->
+            <div class="text-xs md:text-sm text-gray-500 font-mono tracking-wide w-full md:w-auto text-left md:text-right">
+                70+ SUCCESSFUL LAUNCHES
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Hero Image Section -->
+    <!-- Using a placeholder that mimics the green gradient/abstract look -->
+    <div class="w-full h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden relative animate-scale-in delay-400">
+        <!-- 
+           NOTE: Using placehold.co as requested. 
+           I've selected a teal/green color to match the vibe of the screenshot.
+           The text is kept minimal to simulate the abstract nature.
+        -->
+        <img 
+            src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/ee4ac7ce-d315-4784-bc23-822f81496673/hero-1-img-0-1771258909610.png" 
+            alt="Abstract Hero Background" 
+            class="w-full h-full object-cover object-top"
+        >
+        
+        <!-- Overlay to mimic the fade/gradient effect at the top of the image if needed, 
+             though the design shows a clean cut. Adding a subtle gradient overlay for polish. -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F5F5F7] via-transparent to-transparent h-24 pointer-events-none"></div>
+        
+        <!-- Decorative curve simulation (CSS border-radius trick) -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+             <div class="w-[150%] h-[1000px] border-t border-white/30 rounded-[50%] absolute -top-[850px] -left-[25%]"></div>
+        </div>
+    </div>
+
+</body>
+</html>
